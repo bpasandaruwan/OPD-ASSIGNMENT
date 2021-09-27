@@ -13,16 +13,17 @@ using System.Windows.Forms;
 
 namespace OPD_ASSIGNMENT
 {
-    public partial class Form1 : Form
+    public partial class Login_Form_Staff : Form
     {
-        public Form1()
+        public Login_Form_Staff()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void Btn_l_login_Click(object sender, EventArgs e)
         {
-    
             using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
             {
                 if (con.State != ConnectionState.Open)
