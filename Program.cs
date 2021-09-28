@@ -17,7 +17,9 @@ namespace OPD_ASSIGNMENT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Patient());
+ 
+           // Application.Run(new Welcome_Form());
+ 
         }
     }
 }
