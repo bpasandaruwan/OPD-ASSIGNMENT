@@ -16,7 +16,7 @@ namespace OPD_ASSIGNMENT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Form_Staff());
+            Application.Run(new Welcome_Form());
         }
     }
 }
