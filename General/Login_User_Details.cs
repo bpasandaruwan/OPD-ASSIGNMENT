@@ -12,6 +12,10 @@ namespace OPD_ASSIGNMENT.General
         public static string Logged_Username { get; set; }
         public static int Logged_UserID { get; set; } 
 
+        public static int Logged_PatientID { get; set; }
+
+        public static string Logged_Patient_Name { get; set; }
+
 
     }
 }

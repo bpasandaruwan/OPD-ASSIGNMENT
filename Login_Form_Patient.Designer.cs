@@ -119,6 +119,7 @@ namespace OPD_ASSIGNMENT
             this.Btn_l_login.TabIndex = 16;
             this.Btn_l_login.Text = "Login";
             this.Btn_l_login.UseVisualStyleBackColor = true;
+            this.Btn_l_login.Click += new System.EventHandler(this.Btn_l_login_Click);
             // 
             // label1
             // 

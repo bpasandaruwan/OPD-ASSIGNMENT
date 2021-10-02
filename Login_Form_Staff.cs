@@ -33,7 +33,7 @@ namespace OPD_ASSIGNMENT
             using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
             {
 
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM users where username=@UserName AND password =@Password", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM users WHERE username=@UserName AND password =@Password", con))
                 {
 
                     cmd.Parameters.AddWithValue("@UserName", txt_l_username.Text.Trim());

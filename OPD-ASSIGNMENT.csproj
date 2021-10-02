@@ -86,6 +86,42 @@
     <Compile Include="Template_Form.Designer.cs">
       <DependentUpon>Template_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Appointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Appointment.Designer.cs">
+      <DependentUpon>UC_Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Complaint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Complaint.Designer.cs">
+      <DependentUpon>UC_Complaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Dashboard.Designer.cs">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Patient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Patient.Designer.cs">
+      <DependentUpon>UC_Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Users.Designer.cs">
+      <DependentUpon>UC_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_User_Role.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_User_Role.Designer.cs">
+      <DependentUpon>UC_User_Role.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +152,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template_Form.resx">
       <DependentUpon>Template_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Appointment.resx">
+      <DependentUpon>UC_Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Complaint.resx">
+      <DependentUpon>UC_Complaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Dashboard.resx">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Patient.resx">
+      <DependentUpon>UC_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Users.resx">
+      <DependentUpon>UC_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_User_Role.resx">
+      <DependentUpon>UC_User_Role.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
