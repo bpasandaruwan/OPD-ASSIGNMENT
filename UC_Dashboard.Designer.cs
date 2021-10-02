@@ -39,7 +39,7 @@ namespace OPD_ASSIGNMENT
             this.label1.Location = new System.Drawing.Point(225, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 29);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 3;
             this.label1.Text = "DASHBOARD";
             // 
             // UC_Dashboard
