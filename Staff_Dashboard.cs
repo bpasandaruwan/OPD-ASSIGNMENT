@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OPD_ASSIGNMENT.General;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,6 +47,7 @@ namespace OPD_ASSIGNMENT
 
         private void Staff_Dashboard_Load(object sender, EventArgs e)
         {
+             
             UC_Dashboard UC = new UC_Dashboard();
             addUserControl(UC);
         }
@@ -60,6 +62,11 @@ namespace OPD_ASSIGNMENT
         {
             UC_Complaint UC = new UC_Complaint();
             addUserControl(UC);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            //lbl_d_username.Text = Login_User_Details.Logged_Username;
         }
     }
 }

@@ -36,6 +36,7 @@ namespace OPD_ASSIGNMENT
             this.BTN_Dashboard = new System.Windows.Forms.Button();
             this.PNL_Container = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -138,6 +139,15 @@ namespace OPD_ASSIGNMENT
             this.panel2.Size = new System.Drawing.Size(221, 684);
             this.panel2.TabIndex = 5;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1019, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
@@ -161,6 +171,7 @@ namespace OPD_ASSIGNMENT
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -180,12 +191,12 @@ namespace OPD_ASSIGNMENT
             this.Name = "Staff_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STAFF DASHBOARD";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Staff_Dashboard_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -198,6 +209,7 @@ namespace OPD_ASSIGNMENT
         private System.Windows.Forms.Button BTN_Users;
         private System.Windows.Forms.Button BTN_Dashboard;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;

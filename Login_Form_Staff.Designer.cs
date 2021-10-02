@@ -50,7 +50,7 @@ namespace OPD_ASSIGNMENT
             this.txt_l_password.Name = "txt_l_password";
             this.txt_l_password.Size = new System.Drawing.Size(388, 36);
             this.txt_l_password.TabIndex = 1;
-            this.txt_l_password.Text = "admin";
+            this.txt_l_password.Text = "amila";
             this.txt_l_password.UseSystemPasswordChar = true;
             // 
             // txt_l_username
@@ -63,7 +63,7 @@ namespace OPD_ASSIGNMENT
             this.txt_l_username.Name = "txt_l_username";
             this.txt_l_username.Size = new System.Drawing.Size(388, 36);
             this.txt_l_username.TabIndex = 0;
-            this.txt_l_username.Text = "kavindu";
+            this.txt_l_username.Text = "admin";
             // 
             // lbl_password
             // 
