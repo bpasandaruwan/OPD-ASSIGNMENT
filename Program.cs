@@ -18,7 +18,7 @@ namespace OPD_ASSIGNMENT
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
  
-           // Application.Run(new Welcome_Form());
+            Application.Run(new Staff_Dashboard());
  
         }
     }
