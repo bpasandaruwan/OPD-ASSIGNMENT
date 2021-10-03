@@ -29,189 +29,190 @@ namespace OPD_ASSIGNMENT
         /// </summary>
         private void InitializeComponent()
         {
+            this.BTN_Dashboard = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BTN_Patient = new System.Windows.Forms.Button();
             this.BTN_Appointment = new System.Windows.Forms.Button();
             this.BTN_Complaint = new System.Windows.Forms.Button();
-            this.BTN_Patient = new System.Windows.Forms.Button();
             this.BTN_Users = new System.Windows.Forms.Button();
-            this.BTN_Dashboard = new System.Windows.Forms.Button();
-            this.PNL_Container = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.BTN_User_Role = new System.Windows.Forms.Button();
+            this.BTN_Specialty_Area = new System.Windows.Forms.Button();
+            this.BTN_Options = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BTN_Appointment
-            // 
-            this.BTN_Appointment.BackColor = System.Drawing.Color.White;
-            this.BTN_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Appointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Appointment.Location = new System.Drawing.Point(6, 174);
-            this.BTN_Appointment.Name = "BTN_Appointment";
-            this.BTN_Appointment.Size = new System.Drawing.Size(210, 47);
-            this.BTN_Appointment.TabIndex = 3;
-            this.BTN_Appointment.Text = "APPOINTMENT";
-            this.BTN_Appointment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Appointment.UseVisualStyleBackColor = false;
-            this.BTN_Appointment.Click += new System.EventHandler(this.BTN_Appointment_Click);
-            // 
-            // BTN_Complaint
-            // 
-            this.BTN_Complaint.BackColor = System.Drawing.Color.White;
-            this.BTN_Complaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Complaint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Complaint.Location = new System.Drawing.Point(6, 227);
-            this.BTN_Complaint.Name = "BTN_Complaint";
-            this.BTN_Complaint.Size = new System.Drawing.Size(210, 47);
-            this.BTN_Complaint.TabIndex = 4;
-            this.BTN_Complaint.Text = "COMPLAINT";
-            this.BTN_Complaint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Complaint.UseVisualStyleBackColor = false;
-            this.BTN_Complaint.Click += new System.EventHandler(this.BTN_Complaint_Click);
-            // 
-            // BTN_Patient
-            // 
-            this.BTN_Patient.BackColor = System.Drawing.Color.White;
-            this.BTN_Patient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Patient.Location = new System.Drawing.Point(6, 121);
-            this.BTN_Patient.Name = "BTN_Patient";
-            this.BTN_Patient.Size = new System.Drawing.Size(210, 47);
-            this.BTN_Patient.TabIndex = 2;
-            this.BTN_Patient.Text = "PATIENT";
-            this.BTN_Patient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Patient.UseVisualStyleBackColor = false;
-            this.BTN_Patient.Click += new System.EventHandler(this.BTN_Patient_Click);
-            // 
-            // BTN_Users
-            // 
-            this.BTN_Users.BackColor = System.Drawing.Color.White;
-            this.BTN_Users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Users.Location = new System.Drawing.Point(6, 68);
-            this.BTN_Users.Name = "BTN_Users";
-            this.BTN_Users.Size = new System.Drawing.Size(210, 47);
-            this.BTN_Users.TabIndex = 1;
-            this.BTN_Users.Text = "USERS";
-            this.BTN_Users.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Users.UseVisualStyleBackColor = false;
-            this.BTN_Users.Click += new System.EventHandler(this.BTN_users_Click);
             // 
             // BTN_Dashboard
             // 
-            this.BTN_Dashboard.BackColor = System.Drawing.Color.White;
+            this.BTN_Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BTN_Dashboard.FlatAppearance.BorderSize = 0;
             this.BTN_Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Dashboard.Location = new System.Drawing.Point(6, 15);
+            this.BTN_Dashboard.ForeColor = System.Drawing.Color.White;
+            this.BTN_Dashboard.Location = new System.Drawing.Point(158, 544);
             this.BTN_Dashboard.Name = "BTN_Dashboard";
-            this.BTN_Dashboard.Size = new System.Drawing.Size(210, 47);
+            this.BTN_Dashboard.Size = new System.Drawing.Size(181, 47);
             this.BTN_Dashboard.TabIndex = 0;
             this.BTN_Dashboard.Text = "DASHBOARD";
-            this.BTN_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Dashboard.UseVisualStyleBackColor = false;
-            this.BTN_Dashboard.Click += new System.EventHandler(this.BTN_Dashboard_Click);
             // 
-            // PNL_Container
+            // panel1
             // 
-            this.PNL_Container.BackColor = System.Drawing.Color.White;
-            this.PNL_Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PNL_Container.Location = new System.Drawing.Point(0, 94);
-            this.PNL_Container.Name = "PNL_Container";
-            this.PNL_Container.Size = new System.Drawing.Size(1182, 684);
-            this.PNL_Container.TabIndex = 2;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-17, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1239, 107);
+            this.panel1.TabIndex = 6;
             // 
-            // panel2
+            // BTN_Patient
             // 
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.BTN_Dashboard);
-            this.panel2.Controls.Add(this.BTN_Complaint);
-            this.panel2.Controls.Add(this.BTN_Users);
-            this.panel2.Controls.Add(this.BTN_Appointment);
-            this.panel2.Controls.Add(this.BTN_Patient);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 94);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(221, 684);
-            this.panel2.TabIndex = 5;
+            this.BTN_Patient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BTN_Patient.FlatAppearance.BorderSize = 0;
+            this.BTN_Patient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Patient.ForeColor = System.Drawing.Color.White;
+            this.BTN_Patient.Location = new System.Drawing.Point(361, 544);
+            this.BTN_Patient.Name = "BTN_Patient";
+            this.BTN_Patient.Size = new System.Drawing.Size(181, 47);
+            this.BTN_Patient.TabIndex = 0;
+            this.BTN_Patient.Text = "PATIENT";
+            this.BTN_Patient.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // BTN_Appointment
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1019, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.BTN_Appointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BTN_Appointment.FlatAppearance.BorderSize = 0;
+            this.BTN_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Appointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Appointment.ForeColor = System.Drawing.Color.White;
+            this.BTN_Appointment.Location = new System.Drawing.Point(564, 544);
+            this.BTN_Appointment.Name = "BTN_Appointment";
+            this.BTN_Appointment.Size = new System.Drawing.Size(181, 47);
+            this.BTN_Appointment.TabIndex = 0;
+            this.BTN_Appointment.Text = "APPOINTMENT";
+            this.BTN_Appointment.UseVisualStyleBackColor = false;
             // 
-            // panel3
+            // BTN_Complaint
             // 
-            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 113);
-            this.panel3.TabIndex = 0;
+            this.BTN_Complaint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BTN_Complaint.FlatAppearance.BorderSize = 0;
+            this.BTN_Complaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Complaint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Complaint.ForeColor = System.Drawing.Color.White;
+            this.BTN_Complaint.Location = new System.Drawing.Point(774, 544);
+            this.BTN_Complaint.Name = "BTN_Complaint";
+            this.BTN_Complaint.Size = new System.Drawing.Size(181, 47);
+            this.BTN_Complaint.TabIndex = 0;
+            this.BTN_Complaint.Text = "COMPLAINT";
+            this.BTN_Complaint.UseVisualStyleBackColor = false;
+            // 
+            // BTN_Users
+            // 
+            this.BTN_Users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BTN_Users.FlatAppearance.BorderSize = 0;
+            this.BTN_Users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Users.ForeColor = System.Drawing.Color.White;
+            this.BTN_Users.Location = new System.Drawing.Point(158, 614);
+            this.BTN_Users.Name = "BTN_Users";
+            this.BTN_Users.Size = new System.Drawing.Size(181, 47);
+            this.BTN_Users.TabIndex = 0;
+            this.BTN_Users.Text = "USERS";
+            this.BTN_Users.UseVisualStyleBackColor = false;
+            // 
+            // BTN_User_Role
+            // 
+            this.BTN_User_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BTN_User_Role.FlatAppearance.BorderSize = 0;
+            this.BTN_User_Role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_User_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_User_Role.ForeColor = System.Drawing.Color.White;
+            this.BTN_User_Role.Location = new System.Drawing.Point(361, 614);
+            this.BTN_User_Role.Name = "BTN_User_Role";
+            this.BTN_User_Role.Size = new System.Drawing.Size(181, 47);
+            this.BTN_User_Role.TabIndex = 0;
+            this.BTN_User_Role.Text = "USER ROLE";
+            this.BTN_User_Role.UseVisualStyleBackColor = false;
+            this.BTN_User_Role.Click += new System.EventHandler(this.BTN_User_Role_Click);
+            // 
+            // BTN_Specialty_Area
+            // 
+            this.BTN_Specialty_Area.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BTN_Specialty_Area.FlatAppearance.BorderSize = 0;
+            this.BTN_Specialty_Area.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Specialty_Area.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Specialty_Area.ForeColor = System.Drawing.Color.White;
+            this.BTN_Specialty_Area.Location = new System.Drawing.Point(564, 614);
+            this.BTN_Specialty_Area.Name = "BTN_Specialty_Area";
+            this.BTN_Specialty_Area.Size = new System.Drawing.Size(181, 47);
+            this.BTN_Specialty_Area.TabIndex = 0;
+            this.BTN_Specialty_Area.Text = "SPECIALTY AREA";
+            this.BTN_Specialty_Area.UseVisualStyleBackColor = false;
+            // 
+            // BTN_Options
+            // 
+            this.BTN_Options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BTN_Options.FlatAppearance.BorderSize = 0;
+            this.BTN_Options.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Options.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Options.ForeColor = System.Drawing.Color.White;
+            this.BTN_Options.Location = new System.Drawing.Point(774, 614);
+            this.BTN_Options.Name = "BTN_Options";
+            this.BTN_Options.Size = new System.Drawing.Size(181, 47);
+            this.BTN_Options.TabIndex = 0;
+            this.BTN_Options.Text = "OPTIONS";
+            this.BTN_Options.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::OPD_ASSIGNMENT.Properties.Resources.hospital_w_01;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(122, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1182, 94);
-            this.panel1.TabIndex = 0;
-            // 
             // Staff_Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 778);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.PNL_Container);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1112, 736);
+            this.Controls.Add(this.BTN_Options);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.BTN_Specialty_Area);
+            this.Controls.Add(this.BTN_Dashboard);
+            this.Controls.Add(this.BTN_User_Role);
+            this.Controls.Add(this.BTN_Patient);
+            this.Controls.Add(this.BTN_Users);
+            this.Controls.Add(this.BTN_Appointment);
+            this.Controls.Add(this.BTN_Complaint);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Staff_Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "STAFF DASHBOARD";
             this.Load += new System.EventHandler(this.Staff_Dashboard_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel PNL_Container;
-        private System.Windows.Forms.Button BTN_Appointment;
-        private System.Windows.Forms.Button BTN_Complaint;
-        private System.Windows.Forms.Button BTN_Patient;
-        private System.Windows.Forms.Button BTN_Users;
         private System.Windows.Forms.Button BTN_Dashboard;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BTN_Options;
+        private System.Windows.Forms.Button BTN_Specialty_Area;
+        private System.Windows.Forms.Button BTN_User_Role;
+        private System.Windows.Forms.Button BTN_Users;
+        private System.Windows.Forms.Button BTN_Complaint;
+        private System.Windows.Forms.Button BTN_Appointment;
+        private System.Windows.Forms.Button BTN_Patient;
     }
 }
