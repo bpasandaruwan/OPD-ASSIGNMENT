@@ -86,6 +86,12 @@
     <Compile Include="Template_Form.Designer.cs">
       <DependentUpon>Template_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Form.Designer.cs">
+      <DependentUpon>User_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Role_Edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template_Form.resx">
       <DependentUpon>Template_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Form.resx">
+      <DependentUpon>User_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Role_Edit.resx">
       <DependentUpon>User_Role_Edit.cs</DependentUpon>

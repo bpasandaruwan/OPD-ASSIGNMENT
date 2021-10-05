@@ -31,6 +31,16 @@ namespace OPD_ASSIGNMENT
             URF.ShowDialog();
         }
 
+        private void BTN_Users_Click(object sender, EventArgs e)
+        {
+            User_Form UF = new User_Form();
+            UF.ShowDialog();
+        }
+
+
+
+
+
 
 
         //private void panel1_Paint(object sender, PaintEventArgs e)
