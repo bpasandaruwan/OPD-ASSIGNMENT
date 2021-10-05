@@ -31,6 +31,7 @@ namespace OPD_ASSIGNMENT
         {
             this.BTN_Dashboard = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_Patient = new System.Windows.Forms.Button();
             this.BTN_Appointment = new System.Windows.Forms.Button();
             this.BTN_Complaint = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace OPD_ASSIGNMENT
             this.BTN_User_Role = new System.Windows.Forms.Button();
             this.BTN_Specialty_Area = new System.Windows.Forms.Button();
             this.BTN_Options = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,17 @@ namespace OPD_ASSIGNMENT
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1239, 107);
             this.panel1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::OPD_ASSIGNMENT.Properties.Resources.hospital_w_01;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // BTN_Patient
             // 
@@ -121,6 +132,7 @@ namespace OPD_ASSIGNMENT
             this.BTN_Users.TabIndex = 0;
             this.BTN_Users.Text = "USERS";
             this.BTN_Users.UseVisualStyleBackColor = false;
+            this.BTN_Users.Click += new System.EventHandler(this.BTN_Users_Click);
             // 
             // BTN_User_Role
             // 
@@ -164,17 +176,6 @@ namespace OPD_ASSIGNMENT
             this.BTN_Options.TabIndex = 0;
             this.BTN_Options.Text = "OPTIONS";
             this.BTN_Options.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::OPD_ASSIGNMENT.Properties.Resources.hospital_w_01;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Staff_Dashboard
             // 
