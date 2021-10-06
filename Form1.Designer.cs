@@ -46,9 +46,10 @@ namespace OPD_ASSIGNMENT
             this.txt_l_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_l_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_l_password.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_l_password.Location = new System.Drawing.Point(23, 316);
+            this.txt_l_password.Location = new System.Drawing.Point(17, 257);
+            this.txt_l_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_l_password.Name = "txt_l_password";
-            this.txt_l_password.Size = new System.Drawing.Size(388, 36);
+            this.txt_l_password.Size = new System.Drawing.Size(292, 30);
             this.txt_l_password.TabIndex = 4;
             this.txt_l_password.Text = "admin";
             this.txt_l_password.UseSystemPasswordChar = true;
@@ -59,20 +60,22 @@ namespace OPD_ASSIGNMENT
             this.txt_l_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_l_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_l_username.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_l_username.Location = new System.Drawing.Point(23, 240);
+            this.txt_l_username.Location = new System.Drawing.Point(17, 195);
+            this.txt_l_username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_l_username.Name = "txt_l_username";
-            this.txt_l_username.Size = new System.Drawing.Size(388, 36);
+            this.txt_l_username.Size = new System.Drawing.Size(292, 30);
             this.txt_l_username.TabIndex = 3;
-            this.txt_l_username.Text = "kavindu";
+            this.txt_l_username.Text = "admin";
             // 
             // lbl_password
             // 
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_password.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbl_password.Location = new System.Drawing.Point(18, 286);
+            this.lbl_password.Location = new System.Drawing.Point(14, 232);
+            this.lbl_password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(91, 25);
+            this.lbl_password.Size = new System.Drawing.Size(73, 20);
             this.lbl_password.TabIndex = 6;
             this.lbl_password.Text = "Password";
             // 
@@ -81,9 +84,10 @@ namespace OPD_ASSIGNMENT
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_username.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbl_username.Location = new System.Drawing.Point(18, 211);
+            this.lbl_username.Location = new System.Drawing.Point(14, 171);
+            this.lbl_username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(98, 25);
+            this.lbl_username.Size = new System.Drawing.Size(78, 20);
             this.lbl_username.TabIndex = 5;
             this.lbl_username.Text = "Username";
             // 
@@ -91,9 +95,10 @@ namespace OPD_ASSIGNMENT
             // 
             this.pb_login.BackColor = System.Drawing.Color.White;
             this.pb_login.Image = global::OPD_ASSIGNMENT.Properties.Resources.hospital_w_01;
-            this.pb_login.Location = new System.Drawing.Point(123, 1);
+            this.pb_login.Location = new System.Drawing.Point(92, 1);
+            this.pb_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb_login.Name = "pb_login";
-            this.pb_login.Size = new System.Drawing.Size(188, 156);
+            this.pb_login.Size = new System.Drawing.Size(141, 127);
             this.pb_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_login.TabIndex = 7;
             this.pb_login.TabStop = false;
@@ -101,9 +106,10 @@ namespace OPD_ASSIGNMENT
             // Btn_l_login
             // 
             this.Btn_l_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_l_login.Location = new System.Drawing.Point(162, 405);
+            this.Btn_l_login.Location = new System.Drawing.Point(122, 329);
+            this.Btn_l_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_l_login.Name = "Btn_l_login";
-            this.Btn_l_login.Size = new System.Drawing.Size(110, 49);
+            this.Btn_l_login.Size = new System.Drawing.Size(82, 40);
             this.Btn_l_login.TabIndex = 8;
             this.Btn_l_login.Text = "Login";
             this.Btn_l_login.UseVisualStyleBackColor = true;
@@ -114,9 +120,10 @@ namespace OPD_ASSIGNMENT
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(18, 364);
+            this.label1.Location = new System.Drawing.Point(14, 296);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 25);
+            this.label1.Size = new System.Drawing.Size(130, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Forgot Password?";
             // 
@@ -126,18 +133,19 @@ namespace OPD_ASSIGNMENT
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(107, 160);
+            this.label2.Location = new System.Drawing.Point(80, 130);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 36);
+            this.label2.Size = new System.Drawing.Size(175, 29);
             this.label2.TabIndex = 10;
             this.label2.Text = "STAFF LOGIN";
             // 
             // Login_Form_Staff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(434, 475);
+            this.ClientSize = new System.Drawing.Size(326, 386);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_l_login);
@@ -147,6 +155,7 @@ namespace OPD_ASSIGNMENT
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Login_Form_Staff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STAFF LOGIN";
