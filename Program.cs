@@ -1,4 +1,5 @@
 ﻿
+ 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace OPD_ASSIGNMENT
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
  
-           // Application.Run(new Welcome_Form());
+            Application.Run(new Welcome_Form());
  
         }
     }

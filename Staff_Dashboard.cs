@@ -22,5 +22,12 @@ namespace OPD_ASSIGNMENT
         {
             Logged_username.Text = Login_User_Details.Logged_Username;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Speciality_Area SA = new Speciality_Area();
+            SA.ShowDialog();
+
+        }
     }
 }
