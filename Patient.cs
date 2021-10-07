@@ -44,7 +44,7 @@ namespace OPD_ASSIGNMENT
                 using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
                 {
 
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO patient (added_by, full_name, address, nic, phone, purpose, allergies, note, attached_doument, blood_group, date) VALUES (@added_by, @full_name, @address, @nic, @phone, @purpose, @allergies, @note, @attached_document, @blood_group, @date)", con))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO patient (added_by, full_name, address, nic, phone, purpose, allergies, note, attached_doument, blood_group, date) VALUES (@added_by, @full_name, @address, @nic, @phone, @purpose, @allergies, @note, @attached_doument, @blood_group, @date)", con))
                     {
 
                         cmd.Parameters.AddWithValue("@added_by", 5);
@@ -65,7 +65,7 @@ namespace OPD_ASSIGNMENT
                         byte[] contents = new byte[fistream.Length];
                         fistream.Read(contents, 0, (int)fistream.Length);
                        
-                        cmd.Parameters.AddWithValue("@attached_document", contents);
+                        cmd.Parameters.AddWithValue("@attached_doument", contents);
 
                   
 
@@ -154,72 +154,49 @@ namespace OPD_ASSIGNMENT
 
         
         }
-        public void uploadFile(string file)
+        
+
+        private void Patient_Load(object sender, EventArgs e)
+        {
+            Patient_Role_Grid_Load();
+        }
+        private void Patient_Role_Grid_Load()
         {
             using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
             {
 
-
-                con.Open();
-                FileStream fistream = File.OpenRead(file);
-                byte[] contents = new byte[fistream.Length];
-                fistream.Read(contents, 0, (int)fistream.Length);
-                fistream.Close();
-
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO patient(attached_document)VALUES(@attached_document)", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT patient_Id AS PATIENTID, added_by AS ADDEDBY, full_name AS FULLNAME, address AS PADDRESS,nic as NICNO,phone as PHONENO,purpose as PPURPOSE,allergies as ALLERGY,note as NOTES,attached_doument as ATTACHEDDOCUMENTS,blood_group as BLOODGROUP, date as DATE FROM patient  ORDER BY patient_Id DESC", con))
                 {
-                    cmd.Parameters.AddWithValue("@attached_document", contents);
+                    try
+                    {
+
+
+                        if (con.State != ConnectionState.Open)
+                        {
+                            con.Open();
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
+                            PatientGrid.DataSource = dt;
+                            con.Close();
+
+                        }
+
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
 
                 }
-                MessageBox.Show("");
-
 
             }
-                
-
         }
 
-        private void Patient_Load(object sender, EventArgs e)
-        {
-            //Patient_Role_Grid_Load();
-        }
-        //private void Patient_Role_Grid_Load()
-        //{
-        //    using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
-        //    {
-
-        //        using (SqlCommand cmd = new SqlCommand("SELECT pid AS patient_Id, addedby AS added_by, fname AS full_name, ad AS address,nicno as nic,phno as phone,pur as purpose,allergy as allergies,nt as note,attachdoc as attached_document,bldgroup as blood_group, dt as date FROM patient  ORDER BY id DESC", con))
-        //        {
-        //            try
-        //            {
-
-
-        //                if (con.State != ConnectionState.Open)
-        //                {
-        //                    con.Open();
-        //                    SqlDataReader reader = cmd.ExecuteReader();
-        //                    DataTable dt = new DataTable();
-        //                    dt.Load(reader);
-        //                    PatientGrid.DataSource = dt;
-        //                    con.Close();
-
-        //                }
-
-
-
-
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                MessageBox.Show(ex.Message);
-        //            }
-
-
-        //        }
-
-        //    }
-        //}
-        
     }
     
 }
