@@ -104,6 +104,7 @@ namespace OPD_ASSIGNMENT
             this.BTN_Appointment.TabIndex = 0;
             this.BTN_Appointment.Text = "APPOINTMENT";
             this.BTN_Appointment.UseVisualStyleBackColor = false;
+            this.BTN_Appointment.Click += new System.EventHandler(this.BTN_Appointment_Click);
             // 
             // BTN_Complaint
             // 

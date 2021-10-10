@@ -58,24 +58,21 @@ namespace OPD_ASSIGNMENT
             this.cob_u_gender = new System.Windows.Forms.ComboBox();
             this.txt_u_address = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_ur_save = new System.Windows.Forms.Button();
-            this.pb_user_image = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btn_img_browse = new System.Windows.Forms.Button();
             this.btn_document = new System.Windows.Forms.Button();
+            this.btn_img_browse = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pb_user_image = new System.Windows.Forms.PictureBox();
+            this.btn_ur_save = new System.Windows.Forms.Button();
+            this.dt_users = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_user_image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_users)).BeginInit();
             this.SuspendLayout();
             // 
             // cob_u_specialy_area
             // 
             this.cob_u_specialy_area.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cob_u_specialy_area.FormattingEnabled = true;
-            this.cob_u_specialy_area.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
             this.cob_u_specialy_area.Location = new System.Drawing.Point(713, 151);
             this.cob_u_specialy_area.Name = "cob_u_specialy_area";
             this.cob_u_specialy_area.Size = new System.Drawing.Size(329, 33);
@@ -95,18 +92,17 @@ namespace OPD_ASSIGNMENT
             // txt_u_phone
             // 
             this.txt_u_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_u_phone.Location = new System.Drawing.Point(21, 237);
+            this.txt_u_phone.Location = new System.Drawing.Point(21, 240);
             this.txt_u_phone.Name = "txt_u_phone";
             this.txt_u_phone.Size = new System.Drawing.Size(325, 30);
             this.txt_u_phone.TabIndex = 2;
-            this.txt_u_phone.Text = "0773054779";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label5.Location = new System.Drawing.Point(17, 209);
+            this.label5.Location = new System.Drawing.Point(17, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 25);
             this.label5.TabIndex = 50;
@@ -130,14 +126,13 @@ namespace OPD_ASSIGNMENT
             this.txt_u_name.Name = "txt_u_name";
             this.txt_u_name.Size = new System.Drawing.Size(325, 30);
             this.txt_u_name.TabIndex = 0;
-            this.txt_u_name.Text = "Amila Sandaruwan";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label12.Location = new System.Drawing.Point(15, 281);
+            this.label12.Location = new System.Drawing.Point(15, 288);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(116, 25);
             this.label12.TabIndex = 47;
@@ -146,11 +141,10 @@ namespace OPD_ASSIGNMENT
             // txt_u_email
             // 
             this.txt_u_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_u_email.Location = new System.Drawing.Point(20, 310);
+            this.txt_u_email.Location = new System.Drawing.Point(20, 317);
             this.txt_u_email.Name = "txt_u_email";
             this.txt_u_email.Size = new System.Drawing.Size(325, 30);
             this.txt_u_email.TabIndex = 3;
-            this.txt_u_email.Text = "amila@gmail.com";
             // 
             // label6
             // 
@@ -170,7 +164,6 @@ namespace OPD_ASSIGNMENT
             this.txt_u_id_card_no.Name = "txt_u_id_card_no";
             this.txt_u_id_card_no.Size = new System.Drawing.Size(325, 30);
             this.txt_u_id_card_no.TabIndex = 1;
-            this.txt_u_id_card_no.Text = "956325405V";
             this.txt_u_id_card_no.TextChanged += new System.EventHandler(this.txt_u_id_card_no_TextChanged);
             // 
             // label4
@@ -270,7 +263,7 @@ namespace OPD_ASSIGNMENT
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label11.Location = new System.Drawing.Point(6, 351);
+            this.label11.Location = new System.Drawing.Point(6, 355);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 25);
             this.label11.TabIndex = 62;
@@ -279,11 +272,10 @@ namespace OPD_ASSIGNMENT
             // txt_u_staff_id
             // 
             this.txt_u_staff_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_u_staff_id.Location = new System.Drawing.Point(11, 379);
+            this.txt_u_staff_id.Location = new System.Drawing.Point(11, 383);
             this.txt_u_staff_id.Name = "txt_u_staff_id";
             this.txt_u_staff_id.Size = new System.Drawing.Size(325, 30);
             this.txt_u_staff_id.TabIndex = 4;
-            this.txt_u_staff_id.Text = "12236";
             // 
             // label10
             // 
@@ -392,46 +384,25 @@ namespace OPD_ASSIGNMENT
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1292, 497);
+            this.groupBox1.Size = new System.Drawing.Size(1292, 425);
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "CREATE NEW USER";
+            this.groupBox1.Text = "CREATE NEW USER"; 
             // 
-            // btn_ur_save
+            // btn_document
             // 
-            this.btn_ur_save.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btn_ur_save.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_ur_save.FlatAppearance.BorderSize = 0;
-            this.btn_ur_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ur_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ur_save.ForeColor = System.Drawing.Color.White;
-            this.btn_ur_save.Location = new System.Drawing.Point(1073, 378);
-            this.btn_ur_save.Name = "btn_ur_save";
-            this.btn_ur_save.Size = new System.Drawing.Size(206, 34);
-            this.btn_ur_save.TabIndex = 61;
-            this.btn_ur_save.Text = "Save";
-            this.btn_ur_save.UseVisualStyleBackColor = false;
-            this.btn_ur_save.Click += new System.EventHandler(this.btn_ur_save_Click);
-            // 
-            // pb_user_image
-            // 
-            this.pb_user_image.Location = new System.Drawing.Point(1073, 82);
-            this.pb_user_image.Name = "pb_user_image";
-            this.pb_user_image.Size = new System.Drawing.Size(206, 192);
-            this.pb_user_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_user_image.TabIndex = 62;
-            this.pb_user_image.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label15.Location = new System.Drawing.Point(1068, 50);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(123, 25);
-            this.label15.TabIndex = 65;
-            this.label15.Text = "Photograph";
+            this.btn_document.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btn_document.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_document.FlatAppearance.BorderSize = 0;
+            this.btn_document.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_document.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_document.ForeColor = System.Drawing.Color.White;
+            this.btn_document.Location = new System.Drawing.Point(1073, 331);
+            this.btn_document.Name = "btn_document";
+            this.btn_document.Size = new System.Drawing.Size(206, 34);
+            this.btn_document.TabIndex = 67;
+            this.btn_document.Text = "Attach Documant";
+            this.btn_document.UseVisualStyleBackColor = false;
             // 
             // btn_img_browse
             // 
@@ -449,26 +420,65 @@ namespace OPD_ASSIGNMENT
             this.btn_img_browse.UseVisualStyleBackColor = false;
             this.btn_img_browse.Click += new System.EventHandler(this.btn_img_browse_Click);
             // 
-            // btn_document
+            // label15
             // 
-            this.btn_document.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btn_document.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_document.FlatAppearance.BorderSize = 0;
-            this.btn_document.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_document.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_document.ForeColor = System.Drawing.Color.White;
-            this.btn_document.Location = new System.Drawing.Point(1073, 331);
-            this.btn_document.Name = "btn_document";
-            this.btn_document.Size = new System.Drawing.Size(206, 34);
-            this.btn_document.TabIndex = 67;
-            this.btn_document.Text = "Attach Documant";
-            this.btn_document.UseVisualStyleBackColor = false;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label15.Location = new System.Drawing.Point(1068, 50);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(123, 25);
+            this.label15.TabIndex = 65;
+            this.label15.Text = "Photograph";
+            // 
+            // pb_user_image
+            // 
+            this.pb_user_image.Location = new System.Drawing.Point(1073, 82);
+            this.pb_user_image.Name = "pb_user_image";
+            this.pb_user_image.Size = new System.Drawing.Size(206, 192);
+            this.pb_user_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_user_image.TabIndex = 62;
+            this.pb_user_image.TabStop = false;
+            // 
+            // btn_ur_save
+            // 
+            this.btn_ur_save.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btn_ur_save.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_ur_save.FlatAppearance.BorderSize = 0;
+            this.btn_ur_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ur_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ur_save.ForeColor = System.Drawing.Color.White;
+            this.btn_ur_save.Location = new System.Drawing.Point(1073, 378);
+            this.btn_ur_save.Name = "btn_ur_save";
+            this.btn_ur_save.Size = new System.Drawing.Size(206, 34);
+            this.btn_ur_save.TabIndex = 61;
+            this.btn_ur_save.Text = "Save";
+            this.btn_ur_save.UseVisualStyleBackColor = false;
+            this.btn_ur_save.Click += new System.EventHandler(this.btn_ur_save_Click);
+            // 
+            // dt_users
+            // 
+            this.dt_users.AllowUserToAddRows = false;
+            this.dt_users.AllowUserToDeleteRows = false;
+            this.dt_users.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dt_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dt_users.Location = new System.Drawing.Point(10, 509);
+            this.dt_users.Name = "dt_users";
+            this.dt_users.ReadOnly = true;
+            this.dt_users.RowHeadersWidth = 51;
+            this.dt_users.RowTemplate.Height = 24;
+            this.dt_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dt_users.Size = new System.Drawing.Size(1294, 307);
+            this.dt_users.TabIndex = 68;
+            this.dt_users.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_users_CellDoubleClick);
             // 
             // User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 736);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1318, 837);
+            this.Controls.Add(this.dt_users);
             this.Controls.Add(this.txt_u_phone);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -486,6 +496,7 @@ namespace OPD_ASSIGNMENT
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_user_image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_users)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -527,5 +538,6 @@ namespace OPD_ASSIGNMENT
         private System.Windows.Forms.PictureBox pb_user_image;
         private System.Windows.Forms.Button btn_document;
         private System.Windows.Forms.Button btn_img_browse;
+        private System.Windows.Forms.DataGridView dt_users;
     }
 }

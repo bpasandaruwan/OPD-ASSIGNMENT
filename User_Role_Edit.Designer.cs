@@ -30,13 +30,13 @@ namespace OPD_ASSIGNMENT
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cob_ur_status = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_ur_delete = new System.Windows.Forms.Button();
             this.txt_userrole = new System.Windows.Forms.TextBox();
             this.lbl_userrole = new System.Windows.Forms.Label();
             this.btn_ur_update = new System.Windows.Forms.Button();
-            this.btn_ur_delete = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cob_ur_status = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,57 @@ namespace OPD_ASSIGNMENT
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "UPDATE USER ROLE";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label2.Location = new System.Drawing.Point(6, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 25);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Status";
+            // 
+            // cob_ur_status
+            // 
+            this.cob_ur_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cob_ur_status.FormattingEnabled = true;
+            this.cob_ur_status.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.cob_ur_status.Location = new System.Drawing.Point(11, 139);
+            this.cob_ur_status.Name = "cob_ur_status";
+            this.cob_ur_status.Size = new System.Drawing.Size(659, 33);
+            this.cob_ur_status.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label1.Location = new System.Drawing.Point(487, 200);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "OR";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btn_ur_delete
+            // 
+            this.btn_ur_delete.BackColor = System.Drawing.Color.Red;
+            this.btn_ur_delete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_ur_delete.FlatAppearance.BorderSize = 0;
+            this.btn_ur_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ur_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ur_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_ur_delete.Location = new System.Drawing.Point(531, 196);
+            this.btn_ur_delete.Name = "btn_ur_delete";
+            this.btn_ur_delete.Size = new System.Drawing.Size(139, 34);
+            this.btn_ur_delete.TabIndex = 8;
+            this.btn_ur_delete.Text = "Delete";
+            this.btn_ur_delete.UseVisualStyleBackColor = false;
+            this.btn_ur_delete.Click += new System.EventHandler(this.btn_ur_delete_Click);
             // 
             // txt_userrole
             // 
@@ -92,56 +143,6 @@ namespace OPD_ASSIGNMENT
             this.btn_ur_update.Text = "Update";
             this.btn_ur_update.UseVisualStyleBackColor = false;
             this.btn_ur_update.Click += new System.EventHandler(this.btn_ur_update_Click);
-            // 
-            // btn_ur_delete
-            // 
-            this.btn_ur_delete.BackColor = System.Drawing.Color.Red;
-            this.btn_ur_delete.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_ur_delete.FlatAppearance.BorderSize = 0;
-            this.btn_ur_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ur_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ur_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_ur_delete.Location = new System.Drawing.Point(531, 196);
-            this.btn_ur_delete.Name = "btn_ur_delete";
-            this.btn_ur_delete.Size = new System.Drawing.Size(139, 34);
-            this.btn_ur_delete.TabIndex = 8;
-            this.btn_ur_delete.Text = "Delete";
-            this.btn_ur_delete.UseVisualStyleBackColor = false;
-            this.btn_ur_delete.Click += new System.EventHandler(this.btn_ur_delete_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(487, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "OR";
-            // 
-            // cob_ur_status
-            // 
-            this.cob_ur_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cob_ur_status.FormattingEnabled = true;
-            this.cob_ur_status.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.cob_ur_status.Location = new System.Drawing.Point(11, 139);
-            this.cob_ur_status.Name = "cob_ur_status";
-            this.cob_ur_status.Size = new System.Drawing.Size(659, 33);
-            this.cob_ur_status.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(6, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Status";
             // 
             // User_Role_Edit
             // 
