@@ -23,3 +23,31 @@ Adobe XD
 Visual Studio
 MySql Server
 
+
+Benefits
+•	There will be Fewer Errors and Accuracy will be High.
+•	Time will be saved.
+•	Reduce Error Risk.
+•	Easy Access to Data.
+•	Paperless Work.
+
+Learning Outcomes 
+•	Learned about using GitHub.
+•	Got more familiar with Visual Studio
+•	Learned more about C# Language
+•	Got more familiar with Adobe XD
+•	Got more familiar with Trello Framework
+
+Contributors
+•	B. P. A. Sandaruwan – SOF/19/B2/35
+•	K. M. G. D. S. R. Dias – SOF/19/B2/09
+•	J. A. Lakma Manduli -  SOF/19/B2/20
+•	U. K. Diyawadana -  SOF/19/B2/31
+
+You can also follow my GitHub Profile to stay updated about my latest projects: 
+
+If you liked the repo then please support it by giving it a star ⭐!
+
+
+
+
