@@ -1,4 +1,5 @@
 Introduction
+
 OPD (Out-Patient Department) is liable for managing out-patients who just come for a doctor for their issue/ disease checkup and handling front desk operations such as managing a visitor book, call log, postal records, and complaints.
 This system will be mainly used by:
 •	Receptionist
