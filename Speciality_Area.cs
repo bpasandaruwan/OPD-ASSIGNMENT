@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
-using System.Data.SqlClient;
+
 
 namespace OPD_ASSIGNMENT
 {
@@ -23,7 +23,7 @@ namespace OPD_ASSIGNMENT
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-           if(IsFormValid())
+            if (IsFormValid())
             {
 
                 using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
@@ -48,6 +48,7 @@ namespace OPD_ASSIGNMENT
 
                                 txt_area_type.Clear();
                                 txt_area_type.Focus();
+                                gridbind();
                                 con.Close();
 
                             }
@@ -72,7 +73,7 @@ namespace OPD_ASSIGNMENT
 
         private bool IsFormValid()
         {
-         
+
 
             if (txt_area_type.Text.Trim() == string.Empty)
             {
@@ -80,8 +81,8 @@ namespace OPD_ASSIGNMENT
                 txt_area_type.Focus();
                 return false;
             }
- 
-           return true;
+
+            return true;
 
 
         }
@@ -94,7 +95,7 @@ namespace OPD_ASSIGNMENT
         private void gridbind()
         {
             string connstring = ConfigurationManager.ConnectionStrings["ums"].ConnectionString;
-            using(SqlConnection con=new SqlConnection(connstring))
+            using (SqlConnection con = new SqlConnection(connstring))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("select * from speciality_area", con);
@@ -105,5 +106,22 @@ namespace OPD_ASSIGNMENT
                 con.Close();
             }
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int set_area_type = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            //MessageBox.Show(set_user_id.ToString());
+
+            SPECIALITY_AREA_EDIT SpecialityareaEdit = new Speciality_Area_Edit();
+            SpecialityareaEdit.AreaId = set_area_type;
+            SpecialityareaEdit.ShowDialog();
+            
+        }
+
+      
     }
 }
+
+        
+    
+
