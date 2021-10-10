@@ -52,6 +52,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment.designer.cs">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment_Edit_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment_Edit_Form.designer.cs">
+      <DependentUpon>Appointment_Edit_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\Login_User_Details.cs" />
     <Compile Include="Login_Form_Patient.cs">
       <SubType>Form</SubType>
@@ -86,6 +98,12 @@
     <Compile Include="Template_Form.Designer.cs">
       <DependentUpon>Template_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Edit.Designer.cs">
+      <DependentUpon>User_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +128,12 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Appointment.resx">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment_Edit_Form.resx">
+      <DependentUpon>Appointment_Edit_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Form_Patient.resx">
       <DependentUpon>Login_Form_Patient.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template_Form.resx">
       <DependentUpon>Template_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Edit.resx">
+      <DependentUpon>User_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Form.resx">
       <DependentUpon>User_Form.cs</DependentUpon>

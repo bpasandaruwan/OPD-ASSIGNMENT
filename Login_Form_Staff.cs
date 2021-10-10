@@ -60,6 +60,7 @@ namespace OPD_ASSIGNMENT
 
                            Login_User_Details.Logged_UserID = Convert.ToInt32(dataRow["id"]);
                            Login_User_Details.Logged_Username = dataRow["username"].ToString();
+                           Login_User_Details.Logged_UserRole_ID = Convert.ToInt32(dataRow["role_id"]);
 
                                     this.Hide();
                                     Staff_Dashboard SD = new Staff_Dashboard();

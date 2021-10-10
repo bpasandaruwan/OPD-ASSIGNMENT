@@ -25,6 +25,53 @@ namespace OPD_ASSIGNMENT
             Load_Data_In_To_User_Role_Combobox();
 
             Load_Data_In_To_Specialty_Area_Combobox();
+
+            Users_Load();
+        }
+
+        private void Users_Load()
+        {
+            using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
+            {
+
+                using (SqlCommand cmd = new SqlCommand(@"SELECT id AS ID,
+                                                                username AS USERNAME,
+                                                                name AS NAME,
+                                                                phone AS PHONE,
+                                                                id_card_number AS NIC, 
+                                                                role_id AS ROLE,
+                                                                status AS STATUS, 
+                                                                created_date AS DATE
+                                                                FROM users ORDER BY id DESC", con))
+                {
+                    try
+                    {
+
+
+                        if (con.State != ConnectionState.Open)
+                        {
+                            con.Open();
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
+                            dt_users.DataSource = dt;
+                            con.Close();
+
+                        }
+
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+
+                }
+
+            }
         }
 
         private void Load_Data_In_To_Specialty_Area_Combobox()
@@ -77,10 +124,97 @@ namespace OPD_ASSIGNMENT
         {
             if (IsFormValid())
             {
+          
 
-                using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
+                if (string.IsNullOrEmpty(imgLocation)) 
                 {
-                    using (SqlCommand cmd = new SqlCommand(@"INSERT INTO users (username,
+
+                    using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(@"INSERT INTO users (username,
+                                                                                password,
+                                                                                name,
+                                                                                phone,
+                                                                                id_card_number,
+                                                                                gender,
+                                                                                date_of_birth,
+                                                                                address,
+                                                                                marital_status,
+                                                                                staff_id,
+                                                                                staff_email,
+                                                                                date_of_join,  
+                                                                                specialty_area,
+                                                                                role_id, 
+                                                                                created_by,
+                                                                                created_date)
+                                                                             VALUES
+                                                                                   (@username,
+                                                                                   @password,
+                                                                                   @name,
+                                                                                   @phone,
+                                                                                   @id_card,
+                                                                                   @gender,
+                                                                                   @date_of_birth,
+                                                                                   @address,
+                                                                                   @marital_status,
+                                                                                   @staff_id,
+                                                                                   @email,
+                                                                                   @date_of_join,  
+                                                                                   @specialy_area,
+                                                                                   @role_id, 
+                                                                                   @created_by,
+                                                                                   @created_date)", con))
+                        {
+                            cmd.Parameters.AddWithValue("@name", txt_u_name.Text.Trim());
+                            cmd.Parameters.AddWithValue("@id_card", txt_u_id_card_no.Text.Trim());
+                            cmd.Parameters.AddWithValue("@phone", txt_u_phone.Text.Trim());
+                            cmd.Parameters.AddWithValue("@email", txt_u_email.Text.Trim());
+                            cmd.Parameters.AddWithValue("@staff_id", txt_u_staff_id.Text.Trim());
+                            cmd.Parameters.AddWithValue("@date_of_birth", dtp_dfb.Value.ToString());
+                            cmd.Parameters.AddWithValue("@date_of_join", dtp_dfjoin.Value.ToString());
+                            cmd.Parameters.AddWithValue("@gender", cob_u_gender.SelectedItem);
+                            cmd.Parameters.AddWithValue("@marital_status", cob_u_marital_status.SelectedItem);
+                            cmd.Parameters.AddWithValue("@username", txt_u_username.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", txt_u_password.Text.Trim());
+                            cmd.Parameters.AddWithValue("@role_id", cob_u_userrole.SelectedValue);
+                            cmd.Parameters.AddWithValue("@specialy_area", cob_u_specialy_area.SelectedValue);
+                            cmd.Parameters.AddWithValue("@address", txt_u_address.Text.Trim());
+                            cmd.Parameters.AddWithValue("@created_by", Login_User_Details.Logged_UserID);
+                            cmd.Parameters.AddWithValue("@created_date", DateTime.Now);
+
+ 
+ 
+                            if (con.State != ConnectionState.Open)
+                                con.Open();
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Successfully saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                            txt_u_name.Clear();
+                            txt_u_id_card_no.Clear();
+                            txt_u_phone.Clear();
+                            txt_u_email.Clear();
+                            txt_u_staff_id.Clear();
+                            txt_u_username.Clear();
+                            txt_u_password.Clear();
+                            txt_u_address.Clear();
+
+
+                            txt_u_name.Focus();
+                            Users_Load();
+
+                            con.Close();
+
+
+                        }
+                    }
+
+                } 
+                else 
+                {
+                    using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(@"INSERT INTO users (username,
                                                                                 password,
                                                                                 name,
                                                                                 phone,
@@ -115,44 +249,64 @@ namespace OPD_ASSIGNMENT
                                                                                    @role_id, 
                                                                                    @created_by,
                                                                                    @created_date)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@name", txt_u_name.Text.Trim());
-                        cmd.Parameters.AddWithValue("@id_card", txt_u_id_card_no.Text.Trim());
-                        cmd.Parameters.AddWithValue("@phone", txt_u_phone.Text.Trim());
-                        cmd.Parameters.AddWithValue("@email", txt_u_email.Text.Trim());
-                        cmd.Parameters.AddWithValue("@staff_id", txt_u_staff_id.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date_of_birth", dtp_dfb.Value.ToString());
-                        cmd.Parameters.AddWithValue("@date_of_join", dtp_dfjoin.Value.ToString());
-                        cmd.Parameters.AddWithValue("@gender", cob_u_gender.SelectedItem);
-                        cmd.Parameters.AddWithValue("@marital_status", cob_u_marital_status.SelectedItem); 
-                        cmd.Parameters.AddWithValue("@username", txt_u_username.Text.Trim()); 
-                        cmd.Parameters.AddWithValue("@password", txt_u_password.Text.Trim()); 
-                        cmd.Parameters.AddWithValue("@role_id", cob_u_userrole.SelectedValue);
-                        cmd.Parameters.AddWithValue("@specialy_area", cob_u_specialy_area.SelectedValue);
-                        cmd.Parameters.AddWithValue("@address", txt_u_address.Text.Trim());
-                        cmd.Parameters.AddWithValue("@created_by", Login_User_Details.Logged_UserID);
-                        cmd.Parameters.AddWithValue("@created_date", DateTime.Now);
+                        {
+                            cmd.Parameters.AddWithValue("@name", txt_u_name.Text.Trim());
+                            cmd.Parameters.AddWithValue("@id_card", txt_u_id_card_no.Text.Trim());
+                            cmd.Parameters.AddWithValue("@phone", txt_u_phone.Text.Trim());
+                            cmd.Parameters.AddWithValue("@email", txt_u_email.Text.Trim());
+                            cmd.Parameters.AddWithValue("@staff_id", txt_u_staff_id.Text.Trim());
+                            cmd.Parameters.AddWithValue("@date_of_birth", dtp_dfb.Value.ToString());
+                            cmd.Parameters.AddWithValue("@date_of_join", dtp_dfjoin.Value.ToString());
+                            cmd.Parameters.AddWithValue("@gender", cob_u_gender.SelectedItem);
+                            cmd.Parameters.AddWithValue("@marital_status", cob_u_marital_status.SelectedItem);
+                            cmd.Parameters.AddWithValue("@username", txt_u_username.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", txt_u_password.Text.Trim());
+                            cmd.Parameters.AddWithValue("@role_id", cob_u_userrole.SelectedValue);
+                            cmd.Parameters.AddWithValue("@specialy_area", cob_u_specialy_area.SelectedValue);
+                            cmd.Parameters.AddWithValue("@address", txt_u_address.Text.Trim());
+                            cmd.Parameters.AddWithValue("@created_by", Login_User_Details.Logged_UserID);
+                            cmd.Parameters.AddWithValue("@created_date", DateTime.Now);
 
 
-                        byte[] images = null;
-                        FileStream Stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                        BinaryReader brs = new BinaryReader(Stream);
-                        images = brs.ReadBytes((int)Stream.Length);
+                            byte[] images = null;
+                            FileStream Stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                            BinaryReader brs = new BinaryReader(Stream);
+                            images = brs.ReadBytes((int)Stream.Length);
 
-                        cmd.Parameters.AddWithValue("@images", images);
-
-
+                            cmd.Parameters.AddWithValue("@images", images);
 
 
-                        if (con.State != ConnectionState.Open)
-                            con.Open();
+
+
+
+
+                            if (con.State != ConnectionState.Open)
+                                con.Open();
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Successfully saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            con.Close();
-                     
 
+
+                            txt_u_name.Clear();
+                            txt_u_id_card_no.Clear();
+                            txt_u_phone.Clear();
+                            txt_u_email.Clear();
+                            txt_u_staff_id.Clear();
+                            txt_u_username.Clear();
+                            txt_u_password.Clear();
+                            txt_u_address.Clear();
+
+
+                            txt_u_name.Focus();
+                            Users_Load();
+
+                            con.Close();
+
+
+                        }
                     }
+
                 }
+                
 
             }
         }
@@ -259,5 +413,17 @@ namespace OPD_ASSIGNMENT
                 pb_user_image.ImageLocation = imgLocation;
             }
         }
+
+        private void dt_users_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int set_user_id = Convert.ToInt32(dt_users.SelectedRows[0].Cells[0].Value);
+            //MessageBox.Show(set_user_id.ToString());
+
+            User_Edit User_Edit = new User_Edit();
+            User_Edit.Edit_User_ID = set_user_id;
+            User_Edit.ShowDialog();
+            Users_Load();
+        }
+ 
     }
 }
