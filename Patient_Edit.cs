@@ -18,8 +18,54 @@ namespace OPD_ASSIGNMENT
         public Patient_Edit()
         {
             InitializeComponent();
+
+            using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
+            {
+                using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM patient WHERE patient_Id = @Patient_Id", con))
+                {
+
+
+                    try
+                    {
+
+                        if (con.State != ConnectionState.Open)
+                            con.Open();
+                        cmd.Parameters.AddWithValue("@Patient_Id", Edit_Patient_Id);
+                        DataTable dtUser = new DataTable();
+
+                        SqlDataReader sdr = cmd.ExecuteReader();
+                        dtUser.Load(sdr);
+
+                        DataRow row = dtUser.Rows[0];
+
+                        txtfname.Text = row["full_name"].ToString();
+                        txtaddress.Text = row["address"].ToString();
+                        txtNic.Text = row["nic"].ToString();
+                        txtphno.Text = row["phone"].ToString();
+                        txtpurpose.Text = row["purpose"].ToString();
+                        txtallergies.Text = row["allergies"].ToString();
+                        txtNote.Text = row["note"].ToString();
+                        comBlood.SelectedValue = row["blood_group"].ToString();
+                        txtuname.Text = row["username"].ToString();
+                        txtpassword.Text = row["password"].ToString();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                }
+            }
         }
         public int Edit_Patient_Id { get; set; }
+
+
+        private void Patient_Edit_Load(object sender, EventArgs e)
+        {
+           
+        }
+
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -28,17 +74,18 @@ namespace OPD_ASSIGNMENT
 
                 using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
                 {
-                    using (SqlCommand cmd = new SqlCommand(@"UPDATE patient SET full_name  = @full_name,
-                                                                                    address    =@address,
-                                                                                    nic         =@nic,
-                                                                                    phone       =@phone,
-                                                                                    purpose     =@purpose,
-                                                                                    allergies   =@allergies,
-                                                                                    note        =@note,
-                                                                                    blood_group =@blood_group,
-                                                                                    username    =@username, 
-                                                                                    password     =@password
-                                                                                    WHERE patient_Id =@Patient_Id)", con))
+                    using (SqlCommand cmd = new SqlCommand(@"UPDATE patient SET 
+                                                                                full_name  = @full_name,
+                                                                                address    =@address,
+                                                                                nic         =@nic,
+                                                                                phone       =@phone,
+                                                                                purpose     =@purpose,
+                                                                                allergies   =@allergies,
+                                                                                note        =@note,
+                                                                                blood_group =@blood_group
+                                                                                username    =@username, 
+                                                                                password     =@password
+                                                                                WHERE patient_Id =@Patient_Id)", con))
 
 
                     {
@@ -50,7 +97,6 @@ namespace OPD_ASSIGNMENT
                         cmd.Parameters.AddWithValue("@purpose", txtpurpose.Text.Trim());
                         cmd.Parameters.AddWithValue("@allergies", txtallergies.Text.Trim());
                         cmd.Parameters.AddWithValue("@note", txtNote.Text.Trim());
-
                         cmd.Parameters.AddWithValue("@blood_group", comBlood.SelectedItem);
                         cmd.Parameters.AddWithValue("@username", txtuname.Text.Trim());
                         cmd.Parameters.AddWithValue("@password", txtpassword.Text.Trim());
@@ -124,40 +170,7 @@ namespace OPD_ASSIGNMENT
         }
 
 
-        private void Patient_Edit_Load(object sender, EventArgs e)
-        {
-            using (SqlConnection con = new SqlConnection(App_Connection.GetConnectionString()))
-            {
-                using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM patient WHERE patient_Id = @Patient_Id", con))
-                {
-                    cmd.Parameters.AddWithValue("@Patient_Id", Edit_Patient_Id);
-
-                    if (con.State != ConnectionState.Open)
-                        con.Open();
-
-                    DataTable dtUser = new DataTable();
-
-                    SqlDataReader sdr = cmd.ExecuteReader();
-                    dtUser.Load(sdr);
-
-                    DataRow row = dtUser.Rows[0];
-
-                    txtfname.Text = row["full_name"].ToString();
-                    txtaddress.Text = row["address"].ToString();
-                    txtNic.Text = row["nic"].ToString();
-                    txtphno.Text = row["phone"].ToString();
-                    txtpurpose.Text = row["purpose"].ToString();
-                    txtallergies.Text = row["allergies"].ToString();
-                    txtNote.Text = row["note"].ToString();
-                    comBlood.SelectedValue = row["blood_group"].ToString();
-                    txtuname.Text = row["username"].ToString();
-                    txtpassword.Text = row["password"].ToString();
-
-
-
-                }
-            }
-        }
+    
       
  
 
@@ -187,10 +200,7 @@ namespace OPD_ASSIGNMENT
             }
         }
 
-        private void Patient_Edit_Load_1(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
 

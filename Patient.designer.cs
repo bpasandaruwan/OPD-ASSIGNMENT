@@ -177,7 +177,6 @@
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(303, 26);
             this.txtpassword.TabIndex = 17;
-            this.txtpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtuname
             // 
@@ -306,14 +305,15 @@
             // 
             this.PatientGrid.AllowUserToAddRows = false;
             this.PatientGrid.AllowUserToDeleteRows = false;
+            this.PatientGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.PatientGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PatientGrid.Location = new System.Drawing.Point(12, 335);
             this.PatientGrid.Name = "PatientGrid";
             this.PatientGrid.ReadOnly = true;
+            this.PatientGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PatientGrid.Size = new System.Drawing.Size(1006, 251);
             this.PatientGrid.TabIndex = 7;
-            this.PatientGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientGrid_CellContentClick);
-            this.PatientGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientGrid_CellDoubleClick);
+            this.PatientGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientGrid_CellDoubleClick_1);
             // 
             // Patient
             // 

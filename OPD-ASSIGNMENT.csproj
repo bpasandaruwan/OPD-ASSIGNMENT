@@ -200,5 +200,20 @@
   <ItemGroup>
     <None Include="Resources\hospital w-01.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appoint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complaint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ppp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ppp1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

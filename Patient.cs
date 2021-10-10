@@ -233,32 +233,21 @@ namespace OPD_ASSIGNMENT
 
             }
         }
-        private void Patient_Role_Grid_Load()
-        {
-            
-        }
+       
 
-        private void PatientGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void PatientGrid_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int set_patient_id = Convert.ToInt32(PatientGrid.SelectedRows[0].Cells[0].Value);
-            //MessageBox.Show(set_user_id.ToString());
+            int set_patient_Id = Convert.ToInt32(PatientGrid.SelectedRows[0].Cells[0].Value);
+            //MessageBox.Show(set_patient_Id.ToString());
+
+
 
             Patient_Edit Patient_Edit = new Patient_Edit();
-            Patient_Edit.Edit_Patient_Id = set_patient_id;
+            Patient_Edit.Edit_Patient_Id = set_patient_Id;
             Patient_Edit.ShowDialog();
             Patient_Load();
-
-        }
-
-        private void PatientGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-       
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
     

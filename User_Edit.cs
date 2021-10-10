@@ -20,6 +20,7 @@ namespace OPD_ASSIGNMENT
             InitializeComponent();
         }
         public int Edit_User_ID { get; set; }
+
         private void User_Edit_Load(object sender, EventArgs e)
         {
 
