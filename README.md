@@ -14,6 +14,8 @@ OPD MANAGEMENT SYSTEM
 - [OBJECTIVES](#objectives)
 - [TOOLS & TECHNOLOGIES](tools_and_technologies)
 - [GETTING INTO THE PROJECT](project)
+- [LEARNING OUTCOMES & CONCLUSION](conclusion)
+
 
 ---
 
@@ -74,10 +76,34 @@ The Hospital-OPD Management System we developed is a desktop application system 
  <h3 align="center">
  STAFF DASHBOARD
 </h3>
-
  <p align="center">
 <img src="https://user-images.githubusercontent.com/90144577/138583722-414be456-07bb-4ffa-8c4d-2ec5e01a4b04.PNG">
  </p>  
+ <br>
+ <h3 align="center">
+ PATIENT DASHBOARD
+</h3>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90144577/138584191-17c9a20c-e469-4ba6-a211-e2742d8e3d3a.PNG">
+ </P>
+
+---
+
+
+### LEARNING OUTCOMES 
+
+- More familiar with C# language and Visual Studio Platform. 
+- Gain the knowledge of using GitHub repositories.
+- Experienced how a software team builds a system and how to work with it.
+- Learned about system error handling.
+
+---
+
+### CONCLUSION
+
+The project entitled “OPD Management System” under Hospital Management System is developed using C# language and Microsoft Sql Sever  database to computerized process of desktop application system for managing out-patients who just come to a doctor for their issue/ disease check up, and managing front desk operations such as managing a visitor book, call log, postal records and complaints.
+
+
 
 
 
