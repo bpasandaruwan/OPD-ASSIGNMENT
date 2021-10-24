@@ -103,8 +103,12 @@ The Hospital-OPD Management System we developed is a desktop application system 
 
 The project entitled “OPD Management System” under Hospital Management System is developed using C# language and Microsoft Sql Sever  database to computerized process of desktop application system for managing out-patients who just come to a doctor for their issue/ disease check up, and managing front desk operations such as managing a visitor book, call log, postal records and complaints.
 
+---
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90144577/138584489-63ac45bd-d721-4fed-8e3d-bd5350623dc8.png">
 
+ </P>
 
 
 
