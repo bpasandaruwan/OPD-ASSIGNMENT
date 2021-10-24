@@ -1,6 +1,12 @@
-# HOSPITAL INFORMATION MANAGEMENT SYSTEM - OPD MANAGEMENT SYSTEM
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90144577/138583193-10c58549-9855-4593-92f5-c7c40beb1247.png" width="350" height="300" align="center"/>
+</p>
 
-BY 
+<h1 align="center">
+OPD MANAGEMENT SYSTEM
+</h1>
+
+---
 
 ## TABLE OF CONTENTS
 
@@ -8,7 +14,6 @@ BY
 - [OBJECTIVES](#objectives)
 - [TOOLS & TECHNOLOGIES](tools_and_technologies)
 - [GETTING INTO THE PROJECT](project)
-
 
 ---
 
